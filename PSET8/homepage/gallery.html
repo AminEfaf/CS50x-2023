@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Madrid Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Real Madrid Gallery</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>2018 UEFA Champions League Final</h2>
+      <table class="image-table">
+        <tr>
+          <td>
+            <img src="champions_league_2018.jpg" alt="Real Madrid celebrating the Champions League victory">
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>2022 La Liga Trophy Presentation</h2>
+      <table class="image-table">
+        <tr>
+          <td>
+            <img src="la_liga_2022.jpg" alt="Real Madrid players with the La Liga trophy">
+          </td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Real Madrid. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript code goes here
+    // You can add event listeners or manipulate the DOM directly
+
+    // Example JavaScript code:
+    const images = document.querySelectorAll("img");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        alert("You clicked an image!");
+      });
+    });
+  </script>
+</body>
+
+</html>

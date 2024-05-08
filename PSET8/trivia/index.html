@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia! 🎯</title>
+        <script>
+            // Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+            // When click  on correct answer button, set the green color ✅
+            let correct = document.querySelector('.correct');
+            correct.addEventListener('click', function(event) {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#multipleChoice').innerHTML = 'Correct! ✅';
+                });
+
+            // When click  on incorrect answer button, set the red color ❌
+            let incorrects = document.querySelectorAll('.incorrect');
+            for(let i = 0; i < incorrects.length; i++)
+            {
+                incorrects[i].addEventListener('click', function(event) {
+                incorrects[i].style.backgroundColor = 'red';
+                document.querySelector('#multipleChoice').innerHTML = 'Incorrect ❌';
+                });
+            }
+
+            document.querySelector('#check').addEventListener('click', function(){
+            let input = document.querySelector('input');
+            if(input.value == 'Messi'){
+                input.style.backgroundColor = 'green';
+                document.querySelector('#freeResponse').innerHTML = 'Correct! ✅';
+            } else {
+                input.style.backgroundColor = 'red';
+                document.querySelector('#freeResponse').innerHTML = 'Incorrect ❌';
+            }
+            });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia! 🎯</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice 🗂️</h2>
+                <hr>
+                <!-- Add multiple choice question here -->
+                <h3>Which club has won the most Champions League?</h3>
+                <button class="correct">Real Madrid</button>
+                <button class="incorrect">AC Milan</button>
+                <button class="incorrect">Liverpool</button>
+                <button class="incorrect">Bayern Munich</button>
+                <p id="multipleChoice"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response 🖊️</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who has won the most Ballon d'Ors in history?</h3>
+                <input type="text"></input>
+                <button id="check">Check Answer</button>
+
+                <p id="freeResponse"></p>
+            </div>
+        </div>
+    </body>
+</html>
