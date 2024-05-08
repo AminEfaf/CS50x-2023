@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: When we test sort1 on reversed list it takes the longest time between all sorts so we can conclude that this is Bubble Sort because Bubble Sort has O(n²) time complexity (worse than other sorts algorithm).
+
+sort2 uses: Merge Sort
+
+How do you know?: When we test sort2 on reversed list it takes the shortest time between all sorts so we can conclude that this is Merge Sort because Merge Sort has O(n*log n) time complexity (better than other sorts algorithm).
+
+sort3 uses: Selection Sort
+
+How do you know?: Run time of Selection Sort is between Bubble Sort and Merge Sort, after checking run time of all sorts on reversed list we can see run time of sort3 is between sort1 and sort2 so we can conclude sort3 is Selection Sort its good to know that time complexity of Selection Sort is O(n²).
